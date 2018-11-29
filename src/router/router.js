@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '../pages/home/Home'
 import City from '../pages/city/City'
+import Info from '../pages/info/Info'
 
 // 注册router
 Vue.use(Router)
@@ -19,6 +20,11 @@ export default new Router ({
             path: '/city',
             name: 'city',
             component: City
+          },
+          {
+            path: '/info/:id',
+            name: 'info',
+            component: Info
           }
     ]
 })

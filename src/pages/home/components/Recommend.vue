@@ -2,8 +2,8 @@
     <div class="guideflow">
         <div class="recommend">
             <div class="hd"><h3>推荐攻略</h3></div>
-            <div class="bd" v-for="(item,index) in recommendList" :key="index">
-                <a href="/">
+            <div class="bd" v-for="(item,index) in recommendList" :key="index"  @click="headleClickToInfo(item.id)">
+                <a>
                 <div class="title"> {{item.title}} </div>
                 <dl>
                     <dt><img :src="item.imgUrl" alt=""></dt>
@@ -23,7 +23,16 @@
 <script>
 export default {
     name:'recommend',
-    props: ['recommendList']
+    props: ['recommendList'],
+    methods:{
+      headleClickToInfo(id) {
+        // name为路由中的定义的name属性
+        this.$router.push({ name: 'info', params: { id }})
+        console.log(id);
+        
+      }
+    }
+  
 };
 </script>
 
