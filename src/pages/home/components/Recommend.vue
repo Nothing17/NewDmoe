@@ -29,7 +29,7 @@ export default {
       headleClickToInfo(id) {
         // name为路由中的定义的name属性
         this.$router.push({ name: 'info', params: { id }})
-        console.log(id);
+        // console.log(id);
         
       }
     }

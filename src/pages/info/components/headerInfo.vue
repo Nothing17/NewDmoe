@@ -3,19 +3,22 @@
     <div class="logo">
       <a href="/">旅游</a>
     </div>
-    <div class="city-name" @click="goCity"> <span>鼓浪屿</span> </div>
+    <div class="city-name" @click="goCity">
+      <span>{{ city }}</span>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'headerInfo',
+  name: "headerInfo",
+  props: ["city"],
   methods: {
-    goCity () {
-            this.$router.push({path:'/city'})
-        }
+    goCity() {
+      this.$router.push({ path: "/city" });
+    }
   }
-}
+};
 </script>
 
 
@@ -24,7 +27,7 @@ export default {
   height: 1.207729rem;
   line-height: 1.207729rem;
   // background-color: pink;
-//   display: flex;
+  //   display: flex;
   .logo {
     float: left;
     padding: 0.362319rem 0.241546rem 0;
@@ -41,18 +44,18 @@ export default {
   .city-name {
     float: right;
     margin-right: 0.883092rem;
-    margin-top:.2623185rem;
-    font-size: .386473rem;
-    min-height: .683092rem;
-    line-height: .683092rem;
+    margin-top: 0.2623185rem;
+    font-size: 0.386473rem;
+    min-height: 0.683092rem;
+    line-height: 0.683092rem;
     min-width: 1.207729rem;
     background-color: rgba(238, 238, 238, 0.959);
-    border-radius: 80%;
+    border-radius: 0.241546rem;
     box-sizing: content-box;
     color: #ff9d00;
     span {
-        display: block;
-        padding: .120773rem .241546rem 0;
+      display: block;
+      padding: 0.120773rem 0.241546rem 0;
     }
   }
 }

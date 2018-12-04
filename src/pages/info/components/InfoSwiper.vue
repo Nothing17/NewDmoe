@@ -1,12 +1,12 @@
 <template>
   <div class="wrapper">
       <mt-swipe :auto="4000">
-        <!-- <mt-swipe-item v-for="(item, index) in swiperList" :key="index"> 
-        <img :src="item.imgUrl" alt=""> 
-        </mt-swipe-item> -->
-    <mt-swipe-item>1</mt-swipe-item>
+        <mt-swipe-item v-for="(item, index) in urlList" :key="index"> 
+        <img :src="item" alt=""> 
+        </mt-swipe-item>
+    <!-- <mt-swipe-item>1</mt-swipe-item>
     <mt-swipe-item>2</mt-swipe-item>
-    <mt-swipe-item>3</mt-swipe-item>
+    <mt-swipe-item>3</mt-swipe-item> -->
       </mt-swipe>
   </div>
   
@@ -17,12 +17,16 @@
 export default {
   name: "InfoSwiper",
   props: [
-    // 'swiperList'
+    "urlList"
   ],
   data() {
     return {
       
     };
+  },
+  mounted () {
+    // console.log(urlList);
+    
   }
 };
 </script>

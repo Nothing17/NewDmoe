@@ -43,7 +43,7 @@ export default {
         const data = res.data;
         this.swiperList = data.swiperList;
         this.recommendList = data.recommendList[this.$store.state.city] || data.recommendList['北京'] ;
-        console.log(this.recommendList);
+        // console.log(this.recommendList);
         
       }
     }

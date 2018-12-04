@@ -9,7 +9,7 @@
       <span class="text">我们的纪念</span>
     </div>
     <div class="sider"> 
-        <info-swiper></info-swiper>
+        <info-swiper :urlList="urlList" ></info-swiper>
     </div>  
     <div class="text-info">
         风景路上，我带你放空可好？—..
@@ -24,7 +24,8 @@ export default {
   name: "FsWrapper",
   components:{
       InfoSwiper
-  }
+  },
+  props: ["urlList"]
  
 };
 </script>
