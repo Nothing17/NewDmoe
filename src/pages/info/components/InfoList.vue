@@ -2,9 +2,9 @@
   <div class="info-list">
     <div class="desc-info">
       <h1 class="city-name"> {{ city }} </h1>
-      <p>鼓浪屿位于厦门岛西南隅，与厦门市隔海相望，这里既有独特的侨乡风情，又有美味的闽南特色小吃，各式的异国建筑更是让鼓浪屿别具一格。</p>
-      <p>这里汇集了菽庄花园、日光岩、皓月园等热门景点，除此之外，还有很多风格各异的老建筑，适合散步、发呆，安静地享受生活。</p>
-      <p>岛上风格小资的店铺也很多，比如张三疯奶茶铺、苏小糖、赵小姐的店等，在这里，可以慢下来，找一家安静文艺的咖啡店，悠闲地呆一下午，尽情挥霍时间。</p>
+      <p v-for="(item,index) in descList" :key="index"> {{ item }} </p>
+      <!-- <p>这里汇集了菽庄花园、日光岩、皓月园等热门景点，除此之外，还有很多风格各异的老建筑，适合散步、发呆，安静地享受生活。</p>
+      <p>岛上风格小资的店铺也很多，比如张三疯奶茶铺、苏小糖、赵小姐的店等，在这里，可以慢下来，找一家安静文艺的咖啡店，悠闲地呆一下午，尽情挥霍时间。</p> -->
     </div>
     <div class="time-info">
       <div class="row">
@@ -13,15 +13,15 @@
       </div>
       <div class="row">
         <div class="time1">门票攻略</div>
-        <span class="time2">免费</span>
+        <span class="time2"> {{ status }} </span>
       </div>
       <div class="row">
         <div class="time1">用时参考</div>
-        <span class="time2">1天</span>
+        <span class="time2"> {{ day }} 天</span>
       </div>
       <div class="row">
         <div class="time1">电话</div>
-        <span class="time2">0592-2060777</span>
+        <span class="time2"> {{ phone }} </span>
       </div>
     </div>
     <div class="list-info">
@@ -34,7 +34,7 @@
 <script>
 export default {
   name: "InfoList",
-  props: ["city"]
+  props: ["city","status","day","phone","descList"]
 };
 </script>
 

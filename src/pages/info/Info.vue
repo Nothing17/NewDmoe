@@ -2,7 +2,7 @@
   <div class="info">
     <header-info :city="city"></header-info>
     <fs-wrapper :urlList="urlList"></fs-wrapper>
-    <info-list :city="city"></info-list>
+    <info-list :city="city" :status="status" :day="day" :phone="phone" :descList="descList"></info-list>
   </div>
 </template>
 <script>
@@ -19,7 +19,11 @@ export default {
   data () {
     return {
       city:{},
-      urlList:[]
+      urlList:[],
+      status: '',
+      day:'',
+      phone:'',
+      descList:[]
     }
   },
   methods: {
@@ -35,7 +39,11 @@ export default {
         const data = res.data;
         this.city = data.infoList[id].title;
         this.urlList = data.infoList[id].urlList;
-        console.log(data.infoList[id].urlList);
+        this.status =  data.infoList[id].status;
+        this.day =  data.infoList[id].day;
+        this.phone =  data.infoList[id].phone;
+        this.descList = data.infoList[id].descList;
+        console.log(data.infoList[id].descList);
       }
     }
   },
