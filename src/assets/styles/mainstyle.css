@@ -1,0 +1,12 @@
+@keyframes slideUp {
+    0% {
+        transform: translate3d(0, 10%, 0);
+        opacity:1;
+    }
+
+    100% {
+        /* background: green; */
+        transform: translate3d(0, -10%, 0);
+        opacity:1;
+    }
+}

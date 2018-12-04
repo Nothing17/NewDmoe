@@ -6,6 +6,7 @@ import fastClick from 'fastclick'
 import './assets/styles/border.css'
 import './assets/styles/reset.css'
 import './assets/styles/iconfont.css'
+import './assets/styles/mainstyle.css'
 import "mint-ui/lib/style.css"
 
 import axios from 'axios'

@@ -10,6 +10,7 @@
                     <dd>
                         <div class="summary"> {{ item.desc }} </div>
                     </dd>
+                    <dd> <span class="more" >更多详细</span> </dd>
                 </dl>
                 </a>
             </div>
@@ -90,8 +91,22 @@ export default {
           line-height: 1.3em;
           font-size: 0.373rem;
           padding: 0.14rem 0 0;
-          color: #000;
+          color: #bbb;
         }
+      }
+      .more {
+        float: right;
+        width: 1.432367rem;
+        height: .603865rem;
+        line-height: .603865rem;
+        text-align: center;
+        margin-right: .724638rem;
+        // border: .024155rem solid #87cdff;
+        padding: .084155rem;
+        border-radius: .241546rem;
+        background-color: #87cdff;
+        color:#fff;
+        font-size: 14px
       }
     }
   }

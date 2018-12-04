@@ -5,6 +5,7 @@
           <swiper-com :swiperList='swiperList'></swiper-com>
           <icons></icons>
           <recommend :recommendList='recommendList'></recommend>
+          <more></more>
       </div>
     </div>
 </template>
@@ -14,6 +15,7 @@ import HomeHeader from "./components/Header";
 import SwiperCom from "./components/SwiperCom";
 import Icons from "./components/Icons";
 import Recommend from "./components/Recommend";
+import More from "./components/More"
 import Bscroll from "better-scroll";
 
 export default {
@@ -22,7 +24,8 @@ export default {
     HomeHeader,
     SwiperCom,
     Icons,
-    Recommend
+    Recommend,
+    More
   },
   data() {
     return {

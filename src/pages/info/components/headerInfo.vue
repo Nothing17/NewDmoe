@@ -3,13 +3,18 @@
     <div class="logo">
       <a href="/">旅游</a>
     </div>
-    <div class="city-name"> <span>三娘湾</span> </div>
+    <div class="city-name" @click="goCity"> <span>鼓浪屿</span> </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'headerInfo'
+  name: 'headerInfo',
+  methods: {
+    goCity () {
+            this.$router.push({path:'/city'})
+        }
+  }
 }
 </script>
 
