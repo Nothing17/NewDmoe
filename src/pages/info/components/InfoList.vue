@@ -26,7 +26,7 @@
     </div>
     <div class="list-info">
       <h1 class="city-name">图文介绍</h1>
-      <h1 class=" comment">评论</h1>
+      <h1 class=" comment" @click="headleClickToComment">评论</h1>
       <img :src="imgUrl" alt>
     </div>
   </div>
@@ -35,7 +35,16 @@
 <script>
 export default {
   name: "InfoList",
-  props: ["city", "status", "day", "phone", "descList", "imgUrl"]
+  props: ["city", "status", "day", "phone", "descList", "imgUrl"],
+   methods:{
+      headleClickToComment() {
+         const id = this.$route.params.id
+        // name为路由中的定义的name属性
+        this.$router.push({ name: 'comment', params: { id }})
+        // console.log(id);
+        
+      }
+    }
 };
 </script>
 

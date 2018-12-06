@@ -45,7 +45,7 @@ export default {
         this.phone =  data.infoList[id].phone;
         this.descList = data.infoList[id].descList;
         this.imgUrl = data.infoList[id].imgUrl
-        console.log(data.infoList[id].imgUrl);
+        console.log(data.infoList[id]);
       }
     }
   },
