@@ -9,7 +9,7 @@
                 <button class="btn"></button>
             </form>
         </div>
-        <div class="ctiy" @click="goCity">
+        <div class="ctiy" @click.prevent="goCity">
             {{ this.$store.state.city }}
              <span class="iconfont arrow-icon" >&#xe64a;</span>
         </div>

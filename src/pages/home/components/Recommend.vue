@@ -2,7 +2,7 @@
     <div class="guideflow">
         <div class="recommend">
             <div class="hd"><h3>推荐攻略</h3></div>
-            <div class="bd" v-for="(item,index) in recommendList" :key="index"  @click="headleClickToInfo(item.id)">
+            <div class="bd" v-for="(item,index) in recommendList" :key="index"  @click.prevent="headleClickToInfo(item.id)">
                 <a>
                 <div class="title"> {{item.title}} </div>
                 <dl>

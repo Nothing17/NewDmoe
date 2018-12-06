@@ -1,6 +1,6 @@
 <template>
   <div class="header-comment">
-    <div class="back" @click="back">
+    <div class="back" @click.prevent="back">
       <span>
         <img src="../../../assets/images/i_head5_03.png" alt>
       </span>

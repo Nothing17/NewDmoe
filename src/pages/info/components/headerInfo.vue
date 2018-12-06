@@ -3,7 +3,7 @@
     <div class="logo">
       <a href="/">旅游</a>
     </div>
-    <div class="city-name" @click="goCity">
+    <div class="city-name" @click.prevent="goCity">
       <span>{{ city }}</span>
     </div>
   </div>

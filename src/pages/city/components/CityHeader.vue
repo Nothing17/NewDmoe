@@ -1,14 +1,14 @@
 <template>
     <div class="cityheader" >
        <div class="city">
-            <div class="iconfont backindex" @click="goCity">&#xe624;</div>
+            <div class="iconfont backindex" @click.prevent="goCity">&#xe624;</div>
             <div class="suggest_div">
               <input v-model="keyword" type="text" class="cityinput" placeholder="城市">
 
             </div>
             <div class="search-content" v-show="this.keyword" ref="searchitem">
               <ul>
-                <li class="search-item" v-for=" city in list" :key='city.id' @click="handleClickCity(city)"> {{ city.name }} </li>
+                <li class="search-item" v-for=" city in list" :key='city.id' @click.prevent="handleClickCity(city)"> {{ city.name }} </li>
                 <li class="search-item border-bottom" v-show="hasNoData">没有找到匹配数据</li>
               </ul>
             </div>

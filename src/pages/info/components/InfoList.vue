@@ -26,7 +26,7 @@
     </div>
     <div class="list-info">
       <h1 class="city-name">图文介绍</h1>
-      <h1 class=" comment" @click="headleClickToComment">评论</h1>
+      <h1 class="comment" @click.prevent="headleClickToComment">评论</h1>
       <img :src="imgUrl" alt>
     </div>
   </div>
@@ -36,15 +36,14 @@
 export default {
   name: "InfoList",
   props: ["city", "status", "day", "phone", "descList", "imgUrl"],
-   methods:{
-      headleClickToComment() {
-         const id = this.$route.params.id
-        // name为路由中的定义的name属性
-        this.$router.push({ name: 'comment', params: { id }})
-        // console.log(id);
-        
-      }
+  methods: {
+    headleClickToComment() {
+      const id = this.$route.params.id;
+      // name为路由中的定义的name属性
+      this.$router.push({ name: "comment", params: { id } });
+      // console.log(id);
     }
+  }
 };
 </script>
 
@@ -104,10 +103,23 @@ export default {
     float: left;
   }
   .comment {
+    box-sizing: border-box;
     float: right;
-    margin: 0.241546rem 0;
+    // margin: 0.241546rem 0;
     font-size: 0.524638rem;
-    padding-right: 0.241546rem;
+    // padding-right: 0.241546rem;
+
+    // display: inline-block;
+    // height: 0.96rem;
+    padding: 0 0.2666666667rem;
+    // font-size: 0.32rem;
+    line-height: 0.96rem;
+    text-align: center;
+    color: #ff9d00;
+    border-radius: 0.0533333333rem;
+    background-color: #f8f8f8;
+    margin-right: 0.2133333333rem;
+    margin-bottom: 0.2133333333rem;
   }
   img {
     width: 100%;

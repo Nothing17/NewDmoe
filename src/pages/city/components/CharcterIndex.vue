@@ -5,7 +5,7 @@
       v-for="item of letters"
       :key="item"
       :ref="item"
-      @click="handleLetterClick"
+      @click.prevent="handleLetterClick"
     >
       {{item}}
     </li>
