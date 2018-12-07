@@ -14,9 +14,9 @@
             src="https://p3-q.mafengwo.net/s12/M00/A0/A5/wKgED1v7qFOAP8GFAAB6I5fVaQo74.jpeg?imageMogr2%2Fthumbnail%2F%2148x48r%2Fgravity%2FCenter%2Fcrop%2F%2148x48%2Fquality%2F90"
             class="photo"
           >
-          <span class="name">游客</span>
+          <span class="name">游客 </span>
           <span class="user-lv lv-s1">Lv.2</span>
-          <span class="time">2天前</span>
+          <span class="time"> {{ new Date() |datefmt }} </span>
         </div>
         <div class="text">{{ item.content }}</div>
         <div class="picture"></div>
@@ -32,7 +32,8 @@ export default {
     return {
       list: [],
       content: "",
-      isDisabl: true
+      isDisabl: true,
+      time:''
     };
   },
   methods: {
