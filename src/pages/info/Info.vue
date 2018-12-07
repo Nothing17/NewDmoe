@@ -1,5 +1,5 @@
 <template>
-  <div class="info">
+  <div class="info" v-cloak>
     <header-info :city="city"></header-info>
     <fs-wrapper :urlList="urlList"></fs-wrapper>
     <info-list :city="city" :status="status" :day="day" :phone="phone" :descList="descList" :imgUrl="imgUrl"></info-list>

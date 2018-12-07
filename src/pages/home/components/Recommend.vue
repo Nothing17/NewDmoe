@@ -91,7 +91,7 @@ export default {
           line-height: 1.3em;
           font-size: 0.373rem;
           padding: 0.14rem 0 0;
-          color: #bbb;
+          color: rgb(187, 179, 179);
         }
       }
       .more {

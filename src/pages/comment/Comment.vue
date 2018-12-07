@@ -1,5 +1,5 @@
 <template>
-  <div class="comment" ref="comment">
+  <div class="comment" ref="comment" v-cloak>
     <div>
       <header-comment></header-comment>
       <main-comment></main-comment>

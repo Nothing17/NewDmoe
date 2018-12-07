@@ -1,5 +1,5 @@
 <template>
-    <div class="city">
+    <div class="city" v-cloak>
         <city-header :cities='cities'></city-header>
         <city-list   :hotCities='hotCities' :cities='cities' :letter='letter'></city-list>
         <charcter-index :cities='cities' @change='handleLetterChange'></charcter-index>

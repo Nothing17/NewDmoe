@@ -1,5 +1,5 @@
 <template>
-    <div class="home" ref="home">
+    <div class="home" ref="home" v-cloak>
       <div>
           <home-header></home-header>
           <swiper-com :swiperList='swiperList'></swiper-com>
