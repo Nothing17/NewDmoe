@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-      <mt-swipe :auto="4000">
+      <mt-swipe :auto="8000">
         <mt-swipe-item v-for="(item, index) in urlList" :key="index"> 
         <img :src="item" alt=""> 
         </mt-swipe-item>
@@ -25,7 +25,8 @@ export default {
     };
   },
   mounted () {
-    // console.log(urlList);
+   console.log(this.$refs);
+   
     
   }
 };
@@ -37,6 +38,7 @@ export default {
 .mint-swipe {
   // height: 5.603865rem;
   height: 5.075845rem;
+  overflow:visible;
   .mint-swipe-item:nth-child(1) {
     background-color: cornflowerblue;
   }
@@ -52,6 +54,18 @@ export default {
       height: 100%;
     }
   }
+  // 小下标的样式
+  
 }
+// .mint-swipe /deep/  .mint-swipe-indicators {
+//     bottom: -1.207729rem;
+//     .mint-swipe-indicator {
+//       width: .724638rem;
+//       height: .724638rem;
+//       background-color: red;
+//       border-radius: 0;
+//       margin-left:.241546rem;
+//     }
+//   }
 </style>
 

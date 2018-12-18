@@ -27,7 +27,10 @@
     <div class="list-info">
       <h1 class="city-name">图文介绍</h1>
       <h1 class="comment" @click.prevent="headleClickToComment">评论</h1>
-      <img :src="imgUrl" alt>
+      <div class="img-list" v-for="(item ,index) in imgUrl" :key="index">
+        <img :src="item.img">
+        <p class="img-desc"  v-show="item.imgdesc">{{ item.imgdesc }}</p>
+      </div>
     </div>
   </div>
 </template>
@@ -35,7 +38,7 @@
 <script>
 export default {
   name: "InfoList",
-  props: ["city", "status", "day", "phone", "descList", "imgUrl"],
+  props: ["city", "status", "day", "phone", "descList", "imgUrl", "pdesc"],
   methods: {
     headleClickToComment() {
       const id = this.$route.params.id;
@@ -121,9 +124,19 @@ export default {
     margin-right: 0.2133333333rem;
     margin-bottom: 0.2133333333rem;
   }
-  img {
-    width: 100%;
-    height: 100%;
+
+  .img-list {
+    padding: 0.4rem 0.26667rem 0;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    .img-desc {
+      box-sizing: border-box;
+      margin-top: .241546rem;
+      background-color: rgba(0, 0, 0, 0.1);
+      padding:.120773rem 0;
+    }
   }
 }
 </style>
