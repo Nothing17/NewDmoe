@@ -19,15 +19,21 @@
           <span class="time"> {{ new Date() |datefmt }} </span>
         </div>
         <div class="text">{{ item.content }}</div>
-        <div class="picture"></div>
+        <div class="picture">
+          
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+// import Upload from "./UploadComment"
 export default {
   name: "ContentComment",
+  components: {
+    // Upload
+  },
   data() {
     return {
       list: [],
@@ -147,6 +153,9 @@ export default {
         display: -webkit-box;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 10;
+      }
+      .picture {
+        margin-top: .241546rem;
       }
     }
   }

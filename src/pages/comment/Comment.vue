@@ -4,6 +4,7 @@
       <header-comment></header-comment>
       <main-comment></main-comment>
       <content-comment></content-comment>
+      
     </div>
   </div>
 </template>
@@ -12,6 +13,7 @@
 import HeaderComment from "./components/HeaderComment";
 import MainComment from "./components/MainComment";
 import ContentComment from "./components/ContentComment";
+// import Upload from "./components/UploadComment"
 import Bscroll from "better-scroll";
 export default {
   name: "Commet",
@@ -19,6 +21,7 @@ export default {
     HeaderComment,
     MainComment,
     ContentComment
+    // Upload
   },
   mounted() {
     const options = {

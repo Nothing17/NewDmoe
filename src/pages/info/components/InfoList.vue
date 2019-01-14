@@ -20,6 +20,10 @@
         <span class="time2">{{ day }} 天</span>
       </div>
       <div class="row">
+        <div class="time1">门票参考</div>
+        <span class="time2">  <span class="price">￥ {{ price }} </span>  </span>
+      </div>
+      <div class="row">
         <div class="time1">电话</div>
         <span class="time2">{{ phone }}</span>
       </div>
@@ -32,13 +36,20 @@
         <p class="img-desc"  v-show="item.imgdesc">{{ item.imgdesc }}</p>
       </div>
     </div>
+    <div class="list-footer">
+      <tip-com></tip-com>
+    </div>
   </div>
 </template>
 
 <script>
+import TipCom from '../../Tip/Tipcom'
 export default {
   name: "InfoList",
-  props: ["city", "status", "day", "phone", "descList", "imgUrl", "pdesc"],
+  props: ["city", "status", "day", "phone", "descList", "imgUrl", "pdesc","price"],
+  components: {
+    TipCom
+  },
   methods: {
     headleClickToComment() {
       const id = this.$route.params.id;
@@ -95,6 +106,10 @@ export default {
       float: left;
       margin-left: 0.483092rem;
       color: rgb(114, 109, 109);
+      .price {
+        color: red;
+        font-weight: 700;
+      }
     }
   }
 }
@@ -138,5 +153,9 @@ export default {
       padding:.120773rem 0;
     }
   }
+}
+.list-footer {
+  
+
 }
 </style>

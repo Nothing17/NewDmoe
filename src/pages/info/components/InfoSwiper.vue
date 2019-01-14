@@ -1,71 +1,47 @@
 <template>
   <div class="wrapper">
-      <mt-swipe :auto="8000">
-        <mt-swipe-item v-for="(item, index) in urlList" :key="index"> 
-        <img :src="item" alt=""> 
-        </mt-swipe-item>
-    <!-- <mt-swipe-item>1</mt-swipe-item>
-    <mt-swipe-item>2</mt-swipe-item>
-    <mt-swipe-item>3</mt-swipe-item> -->
-      </mt-swipe>
+    <el-carousel :interval="4000" type="card" height="5.075845rem">
+      <el-carousel-item v-for="item in urlList" :key="item">
+        <h3>
+          <img :src="item" alt>
+        </h3>
+      </el-carousel-item>
+    </el-carousel>
   </div>
-  
-
 </template>
 
 <script>
 export default {
   name: "InfoSwiper",
-  props: [
-    "urlList"
-  ],
+  props: ["urlList"],
   data() {
-    return {
-      
-    };
+    return {};
   },
-  mounted () {
-   console.log(this.$refs);
-   
-    
+  mounted() {
+    // console.log(this.$refs);
   }
 };
 </script>
 
 <style lang="less" scoped>
-
-
-.mint-swipe {
-  // height: 5.603865rem;
-  height: 5.075845rem;
-  overflow:visible;
-  .mint-swipe-item:nth-child(1) {
-    background-color: cornflowerblue;
+.el-carousel__item h3 {
+  color: #475669;
+  font-size: 14px;
+  opacity: 0.75;
+  line-height: 5.075845rem;
+  margin: 0;
+  img {
+    width: 100%;
+    height: 100%;
   }
-  .mint-swipe-item:nth-child(2) {
-    background-color: burlywood;
-  }
-  .mint-swipe-item:nth-child(3) {
-    background-color: cadetblue;
-  }
-  .mint-swipe-item {
-    img {
-      width: 100%;
-      height: 100%;
-    }
-  }
-  // 小下标的样式
-  
 }
-// .mint-swipe /deep/  .mint-swipe-indicators {
-//     bottom: -1.207729rem;
-//     .mint-swipe-indicator {
-//       width: .724638rem;
-//       height: .724638rem;
-//       background-color: red;
-//       border-radius: 0;
-//       margin-left:.241546rem;
-//     }
-//   }
+
+.el-carousel__item:nth-child(2n) {
+  background-color: #99a9bf;
+}
+
+.el-carousel__item:nth-child(2n + 1) {
+  background-color: #d3dce6;
+}
 </style>
 

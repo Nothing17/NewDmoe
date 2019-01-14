@@ -2,7 +2,7 @@
   <div class="info" v-cloak>
     <header-info :city="city"></header-info>
     <fs-wrapper :urlList="urlList"></fs-wrapper>
-    <info-list :city="city" :status="status" :day="day" :phone="phone" :descList="descList" :imgUrl="imgUrl" :pdesc="pdesc"></info-list>
+    <info-list :city="city" :status="status" :day="day" :phone="phone" :descList="descList" :imgUrl="imgUrl" :pdesc="pdesc" :price="price"></info-list>
   </div>
 </template>
 <script>
@@ -25,7 +25,8 @@ export default {
       phone:'',
       descList:[],
       imgUrl:[],
-      pdesc:[]
+      pdesc:[],
+      price:''
     }
   },
   methods: {
@@ -47,6 +48,7 @@ export default {
         this.descList = data.infoList[id].descList;
         this.imgUrl = data.infoList[id].imgUrl
         // this.pdesc = data.infoList[id].imgUrl.imgdescList
+        this.price = data.infoList[id].price
         console.log(data.infoList[id].imgUrl);
       }
     }
