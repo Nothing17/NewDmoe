@@ -2,11 +2,10 @@
     <div class="icons">
         <ul class="clearfix" id="j-nav-li">
             <li>
-                <a href="/mdd/" class="i1">
-                    <i></i><br>找攻略
-                </a>
+               
+                <router-link to="/raider" tag="a" class="i1"> <i></i><br>找攻略</router-link>
             </li>
-            <li><a href="/note/" class="i5"><i></i><br>看游记</a></li>
+            <li> <router-link to="/note" tag="a" class="i1"> <i></i><br>看游记</router-link></li>
             <li><a href="/wenda/" class="i7"><i></i><br>问达人</a></li>
             <li><a href="/together/" class="i6"><i></i><br>结伴</a></li>
             <li><a href="/hotel/" class="i2"><i></i><br>酒店</a></li>

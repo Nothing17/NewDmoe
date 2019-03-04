@@ -6,7 +6,6 @@
         <textarea cols="30" rows="10" class="impmessage" v-model="content"></textarea>
         <button class="btn" @click.prevent="postContent" :disabled="isDisabl">发送</button>
       </div>
-
       <!-- for 遍历的对象 -->
       <div class="item" v-for="(item,index) in  list" :key="index">
         <div class="info golden-remark">
@@ -70,7 +69,6 @@ export default {
   watch: {
     content() {
       const content = this.content;
-      // console.log(content);
       if (content !== "") {
         return (this.isDisabl = false);
       } else {
