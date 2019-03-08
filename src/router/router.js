@@ -6,6 +6,9 @@ import Info from '../pages/info/Info'
 import CommentCom from '../pages/comment/Comment'
 import Raider from '../pages/raiders/Raider'
 import Note from '../pages/note/Note.vue'
+import WenDa from '../pages/wenda/Wenda'
+import Friend from '../pages/friend/Friend'
+
 
 // 注册router
 Vue.use(Router)
@@ -43,6 +46,16 @@ export default new Router ({
             path:'/note',
             name:'note',
             component:Note
-          }
+          },
+          {
+            path:'/wenda',
+            name:'wenda',
+            component:WenDa
+          } ,         
+          {
+            path:'/friend',
+            name:'friend',
+            component:Friend
+          }          
     ]
 })
