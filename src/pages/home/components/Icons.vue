@@ -2,7 +2,6 @@
     <div class="icons">
         <ul class="clearfix" id="j-nav-li">
             <li>
-               
                 <router-link to="/raider" tag="a" class="i1"> <i></i><br>找攻略</router-link>
             </li>
             <li> <router-link to="/note" tag="a" class="i5"> <i></i><br>看游记</router-link></li>

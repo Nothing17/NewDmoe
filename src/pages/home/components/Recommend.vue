@@ -1,39 +1,45 @@
 <template>
-    <div class="guideflow">
-        <div class="recommend">
-            <div class="hd"><h3>推荐攻略</h3></div>
-            <div class="bd" v-for="(item,index) in recommendList" :key="index"  @click.prevent="headleClickToInfo(item.id)">
-                <a>
-                <div class="title"> {{item.title}} </div>
-                <dl>
-                    <dt><img :src="item.imgUrl" alt=""></dt>
-                    <dd>
-                        <div class="summary"> {{ item.desc }} </div>
-                    </dd>
-                    <dd> <span class="more" >更多详细</span> </dd>
-                </dl>
-                </a>
-            </div>
-          
-        </div>
-        
+  <div class="guideflow">
+    <div class="recommend">
+      <div class="hd">
+        <h3>推荐攻略</h3>
+      </div>
+      <div
+        class="bd"
+        v-for="(item,index) in recommendList"
+        :key="index"
+        @click.prevent="headleClickToInfo(item.id)"
+      >
+        <a>
+          <div class="title">{{item.title}}</div>
+          <dl>
+            <dt>
+              <img :src="item.imgUrl" alt>
+            </dt>
+            <dd>
+              <div class="summary">{{ item.desc }}</div>
+            </dd>
+            <dd>
+              <span class="more">更多详细</span>
+            </dd>
+          </dl>
+        </a>
+      </div>
     </div>
-    
+  </div>
 </template>
 
 <script>
 export default {
-    name:'recommend',
-    props: ['recommendList'],
-    methods:{
-      headleClickToInfo(id) {
-        // name为路由中的定义的name属性
-        this.$router.push({ name: 'info', params: { id }})
-        // console.log(id);
-        
-      }
+  name: "recommend",
+  props: ["recommendList"],
+  methods: {
+    headleClickToInfo(id) {
+      // name为路由中的定义的name属性
+      this.$router.push({ name: "info", params: { id } });
+      // console.log(id);
     }
-  
+  }
 };
 </script>
 
@@ -67,7 +73,7 @@ export default {
         text-overflow: ellipsis;
       }
       dl {
-              padding: .24rem .4rem .4rem;
+        padding: 0.24rem 0.4rem 0.4rem;
       }
       dt {
         width: 3.466rem;
@@ -97,16 +103,16 @@ export default {
       .more {
         float: right;
         width: 1.432367rem;
-        height: .603865rem;
-        line-height: .603865rem;
+        height: 0.603865rem;
+        line-height: 0.603865rem;
         text-align: center;
-        margin-right: .724638rem;
+        margin-right: 0.724638rem;
         // border: .024155rem solid #87cdff;
-        padding: .084155rem;
-        border-radius: .241546rem;
+        padding: 0.084155rem;
+        border-radius: 0.241546rem;
         background-color: #87cdff;
-        color:#fff;
-        font-size: 14px
+        color: #fff;
+        font-size: 14px;
       }
     }
   }

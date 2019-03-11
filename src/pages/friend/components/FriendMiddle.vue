@@ -5,18 +5,18 @@
         目的地
         <i class="el-icon-arrow-down"></i>
       </div>
-      <div class="time" @click="timeList">
+      <div :class="{ active: isActive, 'time': true }" @click="timeList">
         全部出发时间
         <i class="el-icon-arrow-down"></i>
       </div>
     </div>
-    <div class="search-content" ref="searchitem" v-show="timeListFlag" @click="timeList" >
+    <div class="search-content" ref="searchitem" v-show="timeListFlag">
       <ul>
-        <li class="search-item">111111111</li>
-        <li class="search-item">111111111</li>
-        <li class="search-item">111111111</li>
-        <li class="search-item">111111111</li>
-        <li class="search-item">111111111</li>
+        <li class="search-item">全部出发时间</li>
+        <li class="search-item">今天</li>
+        <li class="search-item">1个月</li>
+        <li class="search-item">1-3个月</li>
+        <li class="search-item">3个月以上</li>
       </ul>
     </div>
     <div class="imgbg">
@@ -29,14 +29,16 @@
 <script>
 export default {
   name: "FriendMiddle",
-  data () {
+  data() {
     return {
-     timeListFlag: false
-    }
+      timeListFlag: false,
+      isActive: false
+    };
   },
   methods: {
-    timeList () {
-      this.timeListFlag = !this.timeListFlag
+    timeList() {
+      this.timeListFlag = !this.timeListFlag;
+      this.isActive = !this.isActive;
     }
   }
 };
@@ -46,8 +48,8 @@ export default {
 <style lang="less" scoped>
 .friend-middle {
   position: relative;
-  
 }
+
 .j_fixed {
   border-bottom: 0.024155rem solid #ddd;
   height: 1.062802rem;
@@ -79,6 +81,9 @@ export default {
       background-color: #ccc;
     }
   }
+.active {
+    color: #ff9d00 ;
+  }
 }
 .imgbg {
   img {
@@ -102,8 +107,8 @@ export default {
     // width: 21%;
     width: 100%;
     line-height: 1.014493rem;
-    font-size: 0.402319rem;
-    font-weight: 900;
+    font-size: 0.338164rem;
+    // font-weight: 900;
     border-bottom: 0.024155rem solid #ccc;
     margin-top: -0.024155rem;
   }

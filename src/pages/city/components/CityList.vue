@@ -8,14 +8,16 @@
             </ul>
             <ul>
                 <li class="local-title">热门</li>
-                <li v-for="(city,index) in hotCities" :key="index" @click.prevent="handleClickCity(city)"> {{ city.name }} </li>
+                <li v-for="(city,index) in hotCities" :key="index" 
+                @click.prevent="handleClickCity(city)"> {{ city.name }} </li>
             </ul>
         </div>
 
         <div class="cities">
             <ul v-for="(item,index) in cities" :key="item.index">
                 <li :ref="index"> {{index}} </li>
-                <li :data-city="city.name" v-for="city in item" :key="city.id" @click.prevent="handleClickCity(city)"> {{ city.name }} </li>
+                <li :data-city="city.name" v-for="city in item" :key="city.id" 
+                @click.prevent="handleClickCity(city)"> {{ city.name }} </li>
             </ul>
         </div>
       </div>

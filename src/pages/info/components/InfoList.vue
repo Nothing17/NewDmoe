@@ -3,8 +3,6 @@
     <div class="desc-info">
       <h1 class="city-name">{{ city }}</h1>
       <p v-for="(item,index) in descList" :key="index">{{ item }}</p>
-      <!-- <p>这里汇集了菽庄花园、日光岩、皓月园等热门景点，除此之外，还有很多风格各异的老建筑，适合散步、发呆，安静地享受生活。</p>
-      <p>岛上风格小资的店铺也很多，比如张三疯奶茶铺、苏小糖、赵小姐的店等，在这里，可以慢下来，找一家安静文艺的咖啡店，悠闲地呆一下午，尽情挥霍时间。</p>-->
     </div>
     <div class="time-info">
       <div class="row">

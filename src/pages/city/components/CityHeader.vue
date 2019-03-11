@@ -1,19 +1,23 @@
 <template>
-    <div class="cityheader" >
-       <div class="city">
-            <div class="iconfont backindex" @click.prevent="goCity">&#xe624;</div>
-            <div class="suggest_div">
-              <input v-model="keyword" type="text" class="cityinput" placeholder="城市">
-
-            </div>
-            <div class="search-content" v-show="this.keyword" ref="searchitem">
-              <ul>
-                <li class="search-item" v-for=" city in list" :key='city.id' @click.prevent="handleClickCity(city)"> {{ city.name }} </li>
-                <li class="search-item border-bottom" v-show="hasNoData">没有找到匹配数据</li>
-              </ul>
-            </div>
-       </div>
+  <div class="cityheader">
+    <div class="city">
+      <div class="iconfont backindex" @click.prevent="goCity">&#xe624;</div>
+      <div class="suggest_div">
+        <input v-model="keyword" type="text" class="cityinput" placeholder="城市">
+      </div>
+      <div class="search-content" v-show="this.keyword" ref="searchitem">
+        <ul>
+          <li
+            class="search-item"
+            v-for=" city in list"
+            :key="city.id"
+            @click.prevent="handleClickCity(city)"
+          >{{ city.name }}</li>
+          <li class="search-item border-bottom" v-show="hasNoData">没有找到匹配数据</li>
+        </ul>
+      </div>
     </div>
+  </div>
 </template>
 
 <script>
@@ -38,8 +42,8 @@ export default {
     }
   },
   computed: {
-    hasNoData () {
-      return !this.list.length
+    hasNoData() {
+      return !this.list.length;
     }
   },
   watch: {
@@ -67,8 +71,8 @@ export default {
       }, 100);
     }
   },
-  mounted () {
-      const options = {
+  mounted() {
+    const options = {
       click: true,
       tap: true
     };
@@ -136,7 +140,7 @@ export default {
         margin-top: -0.024155rem;
       }
       .border-bottom {
-        color: rgba(255, 0, 0, .5)
+        color: rgba(255, 0, 0, 0.5);
       }
     }
   }
