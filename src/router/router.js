@@ -8,6 +8,7 @@ import Raider from '../pages/raiders/Raider'
 import Note from '../pages/note/Note.vue'
 import WenDa from '../pages/wenda/Wenda'
 import Friend from '../pages/friend/Friend'
+import Hotel from '../pages/hotel/Hotel'
 
 
 // 注册router
@@ -56,6 +57,11 @@ export default new Router ({
             path:'/friend',
             name:'friend',
             component:Friend
+          } ,       
+          {
+            path:'/hotel',
+            name:'hotel',
+            component:Hotel
           }          
     ]
 })

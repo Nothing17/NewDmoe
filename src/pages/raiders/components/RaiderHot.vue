@@ -9,8 +9,8 @@
         <div class="scrollview">
           <div class="conbox">
             <a href="javascript:void(0);" :class="{tab:activeColor,'cur':true}" @click="ClickTab">国内</a>
-            <a href="javascript:void(0);">港澳台</a>
-            <a href="javascript:void(0);">日韩</a>
+            <a href="javascript:void(0);" @click="ClickSite('港澳台')" >港澳台</a>
+            <a href="javascript:void(0);" @click="ClickSite('日韩')" >日韩</a>
             <a href="javascript:void(0);">东南亚</a>
             <a href="javascript:void(0);">南亚 西亚</a>
             <a href="javascript:void(0);">欧洲 美洲</a>
@@ -82,6 +82,10 @@ export default {
   methods: {
     ClickTab() {
       this.activeColor = !this.activeColor;
+    },
+    ClickSite(msg) {
+console.log(msg);
+
     }
   }
 };

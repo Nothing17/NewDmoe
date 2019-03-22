@@ -26,6 +26,7 @@ export default {
 .header-info {
   height: 1.207729rem;
   line-height: 1.207729rem;
+  background-color: #fff;
   // background-color: pink;
   //   display: flex;
   .logo {

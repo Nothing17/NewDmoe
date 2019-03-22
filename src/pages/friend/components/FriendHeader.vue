@@ -18,6 +18,7 @@ export default {
 .raider-header {
 //   display: flex;
   // background-color: paleturquoise;
+  background-color: #fff;
   border-bottom: 0.024155rem solid #e5e5e5;
   height: 1.33rem;
   .logo {

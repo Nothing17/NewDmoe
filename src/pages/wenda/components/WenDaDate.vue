@@ -1,10 +1,10 @@
 <template>
   <div class="wenda-date">
     <a href="#" class="wenda-top">
-      <span class="day">05</span>
+      <span class="day" v-html="day"></span>
       <span class="date">
-        <em>2019</em>
-        <em>MAR</em>
+        <em v-html="years"></em>
+        <em v-html="month"></em>
       </span>
       <div class="remember">纪念日</div>
     </a>
@@ -13,7 +13,67 @@
 
 
 <script>
-export default {};
+export default {
+  name: "WendaDate",
+  data() {
+    return {
+      day: "",
+      month: "",
+      years: ""
+    };
+  },
+  methods: {
+    // 获取时间
+    getTime() {
+      const time = new Date();
+      this.day = time.getDate();
+      this.years = time.getFullYear();
+      switch (parseInt(time.getMonth())) {
+        case 0:
+          this.month = "Jan";
+          break;
+        case 1:
+          this.month = "Feb";
+          break;
+        case 2:
+          this.month = "Mar";
+          break;
+        case 3:
+          this.month = "Apr";
+          break;
+        case 4:
+          this.month = "May";
+          break;
+        case 5:
+          this.month = "June";
+          break;
+        case 6:
+          this.month = "July";
+          break;
+        case 7:
+          this.month = "Aug";
+          break;
+        case 8:
+          this.month = "Sep";
+          break;
+        case 9:
+          this.month = "Oct";
+          break;
+        case 10:
+          this.month = "Nov";
+        case 11:
+          this.month = "Dec";
+          break;
+        default:
+          break;
+      }
+     
+    }
+  },
+  created() {
+    this.getTime();
+  }
+};
 </script>
 
 

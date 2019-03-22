@@ -63,7 +63,7 @@ export default {
   },
   watch: {
     content() {
-      const content = this.content;
+      const content = this.content.trim();
       if (content !== "") {
         return (this.isDisabl = false);
       } else {
