@@ -8,10 +8,11 @@
             <li><router-link to="/wenda" tag="a" class="i7"> <i></i><br>问达人</router-link></li>
             <li><router-link to="/friend" tag="a" class="i6"> <i></i><br>结伴</router-link> </li>
             <li><router-link to="/hotel" tag="a" class="i2"> <i></i><br>酒店</router-link> </li>
-            
-            <li><a href="/sales/" class="i3"><i></i><br>旅行商城</a></li>
-            <li><a href="/flight/" class="i4"><i></i><br>机票</a></li>
-            <li><a href="/localdeals/" class="i8"><i></i><br>当地玩乐</a></li>
+            <li><router-link to="/sales" tag="a" class="i3"> <i></i><br>旅行商城</router-link> </li>
+            <li><router-link to="/sales" tag="a" class="i4"> <i></i><br>机票</router-link> </li>
+            <li><router-link to="/wenda" tag="a" class="i8"> <i></i><br>当地玩乐</router-link> </li>        
+            <!-- <li><a href="/flight/" class="i4"><i></i><br>机票</a></li> -->
+            <!-- <li><a href="/localdeals/" class="i8"><i></i><br>当地玩乐</a></li> -->
         </ul>
     </div>
 </template>

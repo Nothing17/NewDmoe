@@ -57,16 +57,21 @@ export default {
       }
       this.timer = setTimeout(() => {
         const result = [];
+        // 遍历对象
         for (let i in this.cities) {
+          // 遍历数组
           this.cities[i].forEach(value => {
+            // value 为每一个对象
             if (
               value.spell.indexOf(this.keyword) > -1 ||
               value.name.indexOf(this.keyword) > -1
             ) {
+              // 存在就把对象放入临时数组中
               result.push(value);
             }
           });
         }
+        // 替换
         this.list = result;
       }, 100);
     }
