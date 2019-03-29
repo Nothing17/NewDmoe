@@ -30,6 +30,6 @@ export default {
 
 <style lang="less" scoped>
     .hotel {
-        // background-color: #ccc;
+        overflow: hidden;
     }
 </style>
